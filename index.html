@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>毎日がバレンタイン</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'M PLUS 1p', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: #5e2c2c;
+    }
+    .box {
+      background: #fff8f8;
+      border: 3px solid #ffb6c1;
+      border-radius: 20px;
+      display: inline-block;
+      padding: 40px;
+      box-shadow: 0 0 15px #ffb6c1;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .choco {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: none;
+      background: #ff69b4;
+      color: white;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>今日のお菓子は…</h1>
+    <div class="choco" id="result">？？？</div>
+    <button onclick="getChoco()">もらう！</button>
+  </div>
+
+  <script>
+    const sweets = [
+      "ホワイトチョコ",
+      "ガトーショコラ",
+      "チョコマカロン",
+      "トリュフチョコ",
+      "抹茶チョコ",
+      "チョコパイ",
+      "じゃがりこ",
+      "ポテトチップス",
+      "ハートクッキー"
+    ];
+
+    function getChoco() {
+      const choice = sweets[Math.floor(Math.random() * sweets.length)];
+      document.getElementById("result").innerText = choice + "をもらいました！";
+    }
+  </script>
+</body>
+</html>
